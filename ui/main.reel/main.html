@@ -47,6 +47,14 @@
                 "value": {"<-": "@tasksController.organizedContent.filter{!completed}.length"}
             }
         },
+        "button": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "button"},
+                "enabled": true,
+                "label": "Button"
+            }
+        },
         "clearCompletedButton": {
             "prototype": "digit/ui/button.reel",
             "properties": {
@@ -67,9 +75,6 @@
         },
         "taskCell": {
             "prototype": "ui/task-cell.reel",
-            "properties": {
-                "element": {"#": "taskCell"}
-            },
             "bindings": {
                 "task": {"<-": "@taskList:iteration.object"}
             }
@@ -77,7 +82,6 @@
         "taskList": {
             "prototype": "digit/ui/list.reel",
             "properties": {
-                "element": {"#": "taskList"},
                 "contentController": {"@": "tasksController"}
             }
         },
@@ -100,15 +104,11 @@
         <button data-montage-id="addTaskButton">
 
         </button>
+        <button data-montage-id="button"></button>
         <output data-montage-id="badge">
 
         </output>
         <button data-montage-id="clearCompletedButton"></button>
-        <ul data-montage-id="taskList">
-            <li data-montage-id="taskCell">
-                Item
-            </li>
-        </ul>
     </div>
 </body>
 </html>
